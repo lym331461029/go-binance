@@ -313,11 +313,12 @@ type doFunc func(req *http.Request) (*http.Response, error)
 
 // Client define API client
 type Client struct {
-	APIKey     string
-	SecretKey  string
-	BaseURL    string
-	UserAgent  string
-	HTTPClient *http.Client
+	APIKey    string
+	SecretKey string
+	BaseURL   string
+	UserAgent string
+	//HTTPClient *http.Client
+	HTTPClient IHTTPClient
 	Debug      bool
 	Logger     *log.Logger
 	TimeOffset int64
